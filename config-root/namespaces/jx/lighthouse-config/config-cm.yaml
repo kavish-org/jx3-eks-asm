@@ -41,7 +41,7 @@ data:
         - needs-rebase
         repos:
         - kavish-org/jx3-eks-asm
-      target_url: http://lighthouse-jx./merge/status
+      target_url: http://lighthouse-jx.44.207.23.15.nip.io/merge/status
 kind: ConfigMap
 metadata:
   creationTimestamp: null
