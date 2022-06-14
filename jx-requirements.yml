@@ -5,26 +5,43 @@ spec:
     enabled: false
     schedule: ""
   cluster:
+    chartRepository: http://jenkins-x-chartmuseum.jx.svc.cluster.local:8080
+    clusterName: tf-jx-paul-eks-cluster
     devEnvApprovers:
     - todo
     environmentGitOwner: todo
     gitKind: github
     gitName: github
     gitServer: https://github.com
+    project: "633321192470"
     provider: eks
+    region: us-east-1
+    registry: 633321192470.dkr.ecr.us-east-1.amazonaws.com
   environments:
   - key: dev
+    owner: kavish-org
+    repository: jx3-eks-asm
   - key: staging
   - key: production
   ingress:
-    domain: ""
-    externalDNS: false
+    domain: 44.207.23.15.nip.io
+    kind: ingress
     namespaceSubDomain: -jx.
     tls:
       email: ""
       enabled: false
       production: false
+  pipelineUser:
+    username: khannakavish
   repository: nexus
   secretStorage: secretsManager
+  storage:
+  - name: logs
+    url: s3://logs-tf-jx-paul-eks-cluster-20220614101336358100000008
+  - name: reports
+    url: s3://reports-tf-jx-paul-eks-cluster-20220614101336352600000006
+  - name: repository
+    url: s3://repository-tf-jx-paul-eks-cluster-20220614101336359100000009
+  terraform: true
   vault: {}
   webhook: lighthouse
