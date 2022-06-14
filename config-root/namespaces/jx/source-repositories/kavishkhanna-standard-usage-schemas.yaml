@@ -1,0 +1,22 @@
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  creationTimestamp: null
+  labels:
+    owner: kavishkhanna
+    provider: github
+    repository: standard-usage-schemas
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  name: kavishkhanna-standard-usage-schemas
+  namespace: jx
+spec:
+  httpCloneURL: https://github.com/kavishkhanna/standard-usage-schemas.git
+  org: kavishkhanna
+  provider: https://github.com
+  providerKind: github
+  providerName: github
+  repo: standard-usage-schemas
+  scheduler:
+    kind: ""
+    name: in-repo
+  url: https://github.com/kavishkhanna/standard-usage-schemas
